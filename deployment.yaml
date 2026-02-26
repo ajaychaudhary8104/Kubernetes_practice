@@ -15,7 +15,7 @@ spec:
       containers:
       - name: kubernetes-test-app
         image: kubernetes-test-app:latest
-        imagePullPolicy: Never  # Tell Kubernetes not to pull from a registry
+        imagePullPolicy: IfNotPresent
         # image: vikash95/kubernetes-test-app:latest
         resources:
           limits:
@@ -29,6 +29,7 @@ kind: Service
 metadata:
   name: kubernetes-test-app
 spec:
+  type: NodePort
   selector:
     app: kubernetes-test-app
   ports:
