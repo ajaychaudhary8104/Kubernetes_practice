@@ -16,7 +16,7 @@ spec:
       - name: kubernetes-test-app
         image: kubernetes-test-app:latest
         imagePullPolicy: IfNotPresent
-        # image: vikash95/kubernetes-test-app:latest
+        # image: ajaychaudhary8104/kubernetes-test-app:latest
         resources:
           limits:
             memory: "64Mi"
